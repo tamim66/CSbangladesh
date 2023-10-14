@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgot.css">
+    <title>CS Bangladesh - Login</title>
+    <link rel="icon" type="image/x-icon" href="resources/icon.png">
+    <script src="https://kit.fontawesome.com/d50027d384.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="banner"></div>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="resources/logo.png" class="logo"></a>
+            </div>
+            <ul class="links">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Tournaments</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#">partners</a></li>
+            </ul>
+            <a href="index.html" class="action_btn">Home</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="#">News</a></li>
+            <li><a href="#">Tournaments</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="#">partners</a></li>
+            <li><a href="index.html" class="action_btn">Home</a></li>
+        </div>
+    </header>
+    <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+    toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-bars'
+        : 'fa-solid fa-bars'
+    }
+    </script>
+    <form method="post" action="login.php" >
+        <div class="container">
+                <img src="resources/Counter-Strike_2_logo.png">
+                <form1 class="input-group">
+                    <input type="text" class="input-field" id="email" name="email" placeholder="E-mail" required>
+                    <p class="text"><br>Contact admin for additional assistance</p>
+                    <button type="submit" class="submit-btn">Enter Email</button>
+                    <a href="login.html" class="text2">Back to Log In
+                </form1>
+        </div>
+    </form>
+</body>
+</html>
